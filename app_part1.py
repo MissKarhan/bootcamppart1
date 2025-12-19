@@ -25,8 +25,9 @@ st.set_page_config(
 @st.cache_data
 def load_data():
     """Load RUP data"""
-    project_root = Path(__file__).resolve().parent.parent.parent.parent
+    project_root = Path(__file__).resolve().parent
     data_path = project_root / 'RUP-PaketPenyedia-Terumumkan-2025.parquet'
+
 
     if not data_path.exists():
         st.error(f"Dataset not found at {data_path}")
